@@ -27,4 +27,7 @@ $SHOT http://www.foxnews.com/politics/elections/2016/presidential-election-headq
 # bbc
 $SHOT http://www.bbc.com/news/election/us2016/results images/bbc-${now}.png '800px' >> /dev/null &
 
+# npr
+$SHOT http://www.npr.org/2016/11/08/500927768/2016-presidential-election-results-for-each-state images/npr-${now}.png "1200px" >> /dev/null &
+
 wait
