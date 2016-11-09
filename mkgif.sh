@@ -5,7 +5,7 @@ mkdir -p /tmp/election
 
 set -x
 # bbc
-mogrify -path /tmp/election/ -crop 800x1150+0+300 +repage images/bbc-*
+mogrify -path /tmp/election/ -crop 800x1045+0+312 +repage images/bbc-*
 
 # cbs
 mogrify -path /tmp/election -crop 1000x1300+0+0 +repage images/cbs-*
@@ -38,5 +38,5 @@ echo "Making gifs..."
 things="npr nytimes-pres nytimes-senate nytimes-house cnn cbs politico fox bbc"
 for prefix in $things; do
     echo $prefix
-    convert -delay 10 -loop 0 images/${prefix}* gifs/${prefix}.gif
+    convert -delay 10 -loop 0 /tmp/election/${prefix}* gifs/${prefix}.gif
 done
